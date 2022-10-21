@@ -1,0 +1,17 @@
+type Person {
+    id: ID!
+    firstName: String
+    lastName: String
+}
+
+type Query {
+    readPerson(id: ID!) : Person
+    findPersonByLastName(lastName: String!): Person
+    findAll: [Person]!
+}
+
+type Mutation {
+    createPerson(firstName: String, lastName: String) : Person!
+    updatePerson(id: ID!, firstName: String, lastName: String) : Person!
+    deletePerson(id: ID!) : Boolean!
+}
